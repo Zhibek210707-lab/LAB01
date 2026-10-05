@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+g_num = sp.lambdify(x, g, 'numpy')
+
+x_values = np.linspace(-3, 3, 401)
+y_values = g_num(x_values)
+
+plt.figure(figsize=(8, 4.5))
+plt.plot(x_values, y_values, label='g(x)')
+plt.axhline(0, color='black', linewidth=0.8)
+plt.axvline(0, color='black', linewidth=0.8)
+plt.grid(alpha=0.3)
+plt.xlabel('x')
+plt.ylabel('g(x)')
+plt.title('g(x) = x⁴ − 5x² + 4')
+plt.legend()
+plt.show()
