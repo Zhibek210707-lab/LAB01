@@ -1,3 +1,5 @@
+git add README.md .gitignore lab01.ipynb
+git commit -m "chore: create laboratory project"
 from fractions import Fraction
 from decimal import Decimal, getcontext
 
